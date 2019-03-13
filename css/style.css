@@ -1,0 +1,203 @@
+@font-face { 
+  font-family: "Exo";
+  src: url("fonts/Exo2.0-Thin.otf"); /*подключаем шрифт*/
+}
+
+.body {
+  background-image: url("./img/background.png"); /*накладываем img на background*/
+}
+
+.body__header {
+  color: white;
+  text-align: center;
+  font-family: "Exo";
+  font-size: 17px;
+  position: relative;
+  margin-top: 60px;
+  top: 15px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.container__item {
+  color: white;
+}
+
+.container__item__buy {
+  text-align: center;
+  font-size: 13px;
+}
+
+.container__item__buy--notwork {
+  text-align: center;
+  color: #acac42;
+  font-size: 13px;
+}
+
+.container__item--link {
+  text-decoration: none;
+  border-bottom: dotted;
+  color: #1698d9;
+}
+
+.container__card__description {
+  position: relative;
+  left: 45px;
+  top: 10px;
+}
+
+.container__card__description--label {
+  font-size: 16px;
+  position: relative;
+  top: 12px;
+  color: #666666;
+}
+
+.container__card__description--amount {
+  position: absolute;
+  top: 120px;
+  font-size: 14px;
+  color: #666666;
+}
+
+.container__card__header {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.container__card {
+  color: black;
+  background-image: url("./img/cards/default.png");
+  background-repeat: no-repeat;
+  height: 480px;
+  width: 320px;
+}
+
+.container__card:hover {
+  background-image: url("./img/cards/default_hover.png");
+  cursor: pointer;
+}
+
+.container__card:hover > .container__circle {
+  background-image: url("./img/circle notclick hover.png");
+}
+
+.container__card-selected {
+  background-image: url("./img/cards/selected.png");
+}
+
+.container__card-selected:hover {
+  background-image: url("./img/cards/selected_hover.png");
+  cursor: pointer;
+}
+
+.container__card-selected:hover > .container__circle {
+  background-image: url("./img/circle clicked hover.png");
+}
+
+.container__card-selected:hover .container__card__description--label {
+  visibility: hidden;
+}
+ 
+.container__card-selected:hover .container__card__description--label::after  {
+  content: attr(data-hover);
+  font-size: 16px;
+  color: #666666;
+  visibility: visible;
+  position: absolute;
+  top: 0; 
+
+}
+.container__card-notwork {
+  color: #d4d4d4;
+  background-image: url("./img/cards/notwork.png");
+  background-repeat: no-repeat;
+  height: 480px;
+  width: 320px;
+}
+
+.item-1,
+.item-3 {
+  margin-right: 80px;
+  margin-left: 80px;
+}
+
+.container__circle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1698d9;
+  border-radius: 50%;
+  width: 81px;
+  height: 81px;
+  color: #fff;
+  line-height: 30px;
+  position: relative;
+  left: 229px;
+  bottom: 30px;
+}
+
+.container__circle-selected {
+  background-color: #d91667
+}
+
+.container__circle-notwork {
+   background-color: #b3b3b3;
+}
+
+.container__circle__weight {
+  font-size: 40px;
+  padding-top: 10px;
+}
+
+.container__circle__measure {
+  font-size: 20px;
+}
+
+.container__card__cat {
+  position: relative;
+  top: 66px;
+  left: 5px;
+}
+
+.container__card__cat-notwork {
+  opacity: 0.5;
+  position: relative;
+  top: 66px;
+  left: 5px;
+}
+
+@media (max-width: 420px){
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  }
+.container__item {
+  margin-right:0;
+  margin-left: 0;
+}
+
+}
+
+@media (max-width: 1024px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.item-1 {
+  margin-left: 0px;
+}
+}

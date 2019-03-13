@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Нямушка для кота</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body class="body">
+  <header class="body__header">
+    <h1>Ты сегодня покормил кота?</h1>
+  </header>
+  <main class="container">
+    <div class="container__item item-1">
+      <div class="container__card" id="card-1" onclick="selectCard1()"><!---- повесили событие клик с функцией selectCard1 на класс-->
+        <div class="container__card__description ">
+          <p class="container__card__description--label" data-hover="Котэ не одобряет?">Сказочное заморское явство
+            <br>
+          </p>
+          <h2>
+            <div class="container__card__header ">Нямушка</div>
+            <div class="container__card__taste ">с фуа-гра</div>
+          </h2>
+          <p class="container__card__description--amount">10 порций
+            <br> Мышь в подарок
+          </p>
+        </div>
+        <img class="container__card__cat " src="./css/img/cat.png ">
+        <div class="container__circle" id="circle-1">
+          <div class="container__circle__weight ">0,5</div>
+          <div class="container__circle__measure ">кг</div>
+        </div>
+      </div>
+      <p class="container__item__buy" id="duck-taste">
+        Чего сидишь? Порадуй кота,
+        <a class="container__item--link" href="javascript:selectCard1()">купи</a>
+      </p>
+    </div>
+
+    <div class="container__item item-2">
+      <div class="container__card" id="card-2" onclick="selectCard2()"><!---- повесили событие клик с функцией selectCard2 на класс-->
+        <div class="container__card__description ">
+          <p class="container__card__description--label" data-hover="Котэ не одобряет?">
+            Сказочное заморское явство
+            <br>
+          </p>
+          <h2>
+            <div class="container__card__header">Нямушка</div>
+            <div class="container__card_taste">с рыбой</div>
+          </h2>
+          <p class="container__card__description--amount">40 порций
+            <br> 2 мышь в подарок
+          </p>
+        </div>
+        <img class=" container__card__cat" src="./css/img/cat.png ">
+        <div class="container__circle" id="circle-2">
+          <div class="container__circle__weight">2</div>
+          <div class="container__circle__measure">кг</div>
+        </div>
+      </div>
+      <p class="container__item__buy" id="fish-taste">Чего сидишь? Порадуй кота,
+        <a class="container__item--link" href="javascript:selectCard2()">купи</a>
+      </p>
+    </div>
+
+    <div class="container__item item-3">
+      <div class="container__card-notwork" id="card-3 "onclick="selectCard3() "><!---- повесили событие клик с функцией selectCard3 на класс-->
+        <div class="container__card__description ">
+          <p class="container__card__description--label" data-hover="Котэ не одобряет?">Сказочное заморское явство
+            <br>
+          </p>
+          <h2>
+            <div class="container__card__header ">Нямушка</div>
+            <div class="container__card_taste ">с курой</div>
+          </h2>
+          <p class="container__card__description--amount">100 порций
+            <br> 5 мышь в подарок
+            <br> Заказчик доволен
+          </p>
+        </div>
+        <img class="container__card__cat-notwork " src="./css/img/cat.png ">
+        <div class="container__circle container__circle-notwork " id="circle-3 ">
+          <div class="container__circle__weight ">5</div>
+          <div class="container__circle__measure ">кг</div>
+        </div>
+      </div>
+      <p class="container__item__buy--notwork">Печалька, с курой закончился</p>
+
+    </div>
+  </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
